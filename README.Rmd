@@ -1,12 +1,2 @@
----
-title: "README"
-output: html_document
-date: "2023-11-21"
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 ## README
 Data and code to replicate study "Geographies of Discontent: Measuring and Understanding the Feeling of Abandonment in the Chilean Region of Valparaiso (2019-2021)"
