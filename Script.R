@@ -62,15 +62,23 @@ Data_2_sp <- Data_2_sp %>%
   )
 
 
-###### prueba ########
+###### TEST ########
 model_B0 <- 'efin =~ efin2 + efin4 + efin5
-          efin ~ edad + SES + sexo + educ + yearcat3 + yearcat2 + Cluster_01 + periphery'
+          efin ~ edad + SES + sexo + educ + yearcat3 + yearcat2 + Cluster_01 + periphery + camp'
 fit_B0 <- sem(model = model_B0,
               #standardized = TRUE,
               data = Data_2)
 pars.factors_B0 <- standardizedSolution(fit_B0)[ standardizedSolution(fit_B0)[,'op']=='~', c(3:7)]
 pars.factors_B0
 
+###### TEST ########
+model_B00 <- 'efin =~ efin2 + efin4 + efin5
+          efin ~ edad + SES + sexo + educ + yearcat3 + yearcat2 + Cluster_01 + periphery'
+fit_B00 <- sem(model = model_B00,
+              #standardized = TRUE,
+              data = Data_2)
+pars.factors_B00 <- standardizedSolution(fit_B00)[ standardizedSolution(fit_B00)[,'op']=='~', c(3:7)]
+pars.factors_B00
 
 
 
